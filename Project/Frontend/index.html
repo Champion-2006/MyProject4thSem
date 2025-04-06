@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav">
+    <h1 id="title1">Budget Tracker</h1>
+    <button onclick="showSection('signup')">Signup</button>
+    <button onclick="showSection('login')">Login</button>
+    <button onclick="showSection('expense')">Expenses</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div id="signup">
+    <h2>Signup</h2>
+    <input type="email" id="signupEmail" placeholder="Email" />
+    <input type="password" id="signupPassword" placeholder="Password" />
+    <button onclick="signup()">Signup</button>
+  </div>
+  <div id="login">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email" />
+    <input type="password" id="loginPassword" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="expense">
+    <h2>Add Expense</h2>
+    <input type="text" id="title" placeholder="Title" />
+    <input type="number" id="amount" placeholder="Amount" />
+    <button onclick="addExpense()">Add</button>
+
+    <h3>Your Expenses</h3>
+    <button onclick="calculateTotal()">Total Expenses</button>
+    <span id="totalDisplay"></span>
+    <table id="expenseTable">
+      <tr><th>Title</th><th>Amount</th><th>Action</th></tr>
+      
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
